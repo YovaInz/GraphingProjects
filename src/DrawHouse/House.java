@@ -64,9 +64,17 @@ public class House extends JPanel {
         // g.setColor(new Color(213, 212, 219));
         // g.fillPolygon(new int[] { 500, 500, 100 }, new int[] { 150, 50, 150 }, 3);
         // ===== ENTRADA =====
+
+        g.setColor(new Color(239, 203, 193));
+        g.fillPolygon(new int[] { 333, 333, 245 }, new int[] { 405, 430, 430 }, 3); // piso entrada
+        g.fillRect(333, 405, 317, 25); // piso entrada
+        g.setColor(new Color(130, 114, 108));
+        g.fillPolygon(new int[] { 333, 333, 287 }, new int[] { 405, 418, 418 }, 3); // sombra piso entrada
+        g.fillRect(333, 405, 317, 13); // sombra piso entrada
+
         g.setColor(new Color(170, 161, 157));
-        g.fillRect(355, 300, 205, 110);// Pared 1 entrada
-        g.fillRect(560, 300, 75, 100);// pared 2 entrada
+        g.fillRect(355, 300, 205, 118);// Pared 1 entrada
+        g.fillRect(560, 300, 75, 108);// pared 2 entrada
         g.setColor(new Color(155, 143, 138));
         y = 308;
         for (int i = 0; i < 14; i++) {
@@ -109,19 +117,30 @@ public class House extends JPanel {
         }
         g.setColor(new Color(162, 162, 173));
         g.drawLine(640, 385, 380, 385);
-
+        g2d.setStroke(new BasicStroke(7)); // barandilla 1
+        g.setColor(new Color(170, 166, 164)); // barandilla 1
+        g2d.drawLine(260, 383, 320, 373); // barandilla 1
         // pilares
         g.setColor(new Color(243, 239, 240));
         g.fillRect(245, 300, 15, 130);// pilar 1
-        g.fillRect(365, 300, 15, 130);// pilar 2
-        g.fillRect(500, 300, 15, 130);// pilar 3
-        g.fillRect(635, 300, 15, 130);// pilar 4 (pegado a porton)
+        g.fillRect(247, 443, 11, 10);// pilar 1 parte inferior
+        x = 365;
+        for (int i = 0; i < 3; i++) { // pilares 2, 3 y 4
+            g.fillRect(x, 300, 15, 130);
+            g.fillRect((x + 2), 443, 11, 10);
+            x += 135;
+        }
+        g.fillRect(245, 433, 405, 10);// base
 
         g.setColor(new Color(175, 188, 201));
         g.fillRect(245, 300, 15, 23); // sombra pilar 1
-        g.fillRect(365, 300, 15, 23); // sombra pilar 2
-        g.fillRect(500, 300, 15, 23); // sombra pilar 3
-        g.fillRect(635, 300, 15, 23); // sombra pilar 4
+        g.fillRect(247, 443, 11, 4);// sombra pilar 1 parte inferior
+        x = 365;
+        for (int i = 0; i < 3; i++) { // sombras pilares 2, 3 y 4
+            g.fillRect(x, 300, 15, 23);
+            g.fillRect((x + 2), 443, 11, 4);
+            x += 135;
+        }
 
     }
 
