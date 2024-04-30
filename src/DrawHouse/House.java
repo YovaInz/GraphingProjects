@@ -63,6 +63,66 @@ public class House extends JPanel {
         g2d.drawRect(907, 365, 51, 70); // parte derecha puerta 2
         // g.setColor(new Color(213, 212, 219));
         // g.fillPolygon(new int[] { 500, 500, 100 }, new int[] { 150, 50, 150 }, 3);
+        // ===== ENTRADA =====
+        g.setColor(new Color(170, 161, 157));
+        g.fillRect(355, 300, 205, 110);// Pared 1 entrada
+        g.fillRect(560, 300, 75, 100);// pared 2 entrada
+        g.setColor(new Color(155, 143, 138));
+        y = 308;
+        for (int i = 0; i < 14; i++) {
+            g.drawLine(645, y, 560, y);
+            y += 7;
+        }
+        g.drawLine(560, 300, 560, 410);
+        g.drawLine(555, 300, 555, 410);
+        y = 308;
+        for (int i = 0; i < 13; i++) {
+            g.drawLine(555, y, 360, y);
+            y += 8;
+        }
+        g.setColor(new Color(177, 172, 169));
+        g.fillRect(390, 305, 100, 80);
+        g.setColor(new Color(24, 28, 38));
+        g.fillRect(565, 315, 25, 20);// ventana pequeña
+        g.fillRect(395, 310, 42, 70); // ventana grande lado izquierdo
+        g.fillRect(443, 310, 42, 70); // ventana grande lado derecho
+
+        // ===== FACHADA ENTRADA =====
+        g.setColor(new Color(243, 239, 240));
+        // rejillas
+        g.fillRect(380, 415, 120, 5);// parte inferior rejilla 1
+        g.fillRect(380, 383, 120, 7);// parte superior rejilla 1
+
+        // barras rejillas 1
+        int x = 382;
+        for (int i = 0; i < 15; i++) {
+            g.fillRect(x, 390, 3, 25);
+            x += 8;
+        }
+        g.fillRect(515, 415, 120, 5);// parte inferior rejilla 2
+        g.fillRect(515, 383, 120, 7);// parte superior rejilla 2
+        // barras rejillas 2
+        x = 517;
+        for (int i = 0; i < 15; i++) {
+            g.fillRect(x, 390, 3, 25);
+            x += 8;
+        }
+        g.setColor(new Color(162, 162, 173));
+        g.drawLine(640, 385, 380, 385);
+
+        // pilares
+        g.setColor(new Color(243, 239, 240));
+        g.fillRect(245, 300, 15, 130);// pilar 1
+        g.fillRect(365, 300, 15, 130);// pilar 2
+        g.fillRect(500, 300, 15, 130);// pilar 3
+        g.fillRect(635, 300, 15, 130);// pilar 4 (pegado a porton)
+
+        g.setColor(new Color(175, 188, 201));
+        g.fillRect(245, 300, 15, 23); // sombra pilar 1
+        g.fillRect(365, 300, 15, 23); // sombra pilar 2
+        g.fillRect(500, 300, 15, 23); // sombra pilar 3
+        g.fillRect(635, 300, 15, 23); // sombra pilar 4
+
     }
 
     public static void main(String[] args) {
