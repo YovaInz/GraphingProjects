@@ -291,11 +291,13 @@ public class House extends JPanel {
 
         // ====== TECHO ========
 
+        ////////// PARTE DE VICTORIA/////////////
+
+        // ! tu parte madafaka //
+
         ////////// PARTE DE YOVANNI/////////////
 
-        // no tocar //
-
-        ////////// PARTE DE VICTORIA/////////////
+        // ! no me la toques //
 
     }
 
