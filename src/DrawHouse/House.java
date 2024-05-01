@@ -66,8 +66,8 @@ public class House extends JPanel {
         // ===== ENTRADA =====
 
         g.setColor(new Color(239, 203, 193));
-        g.fillPolygon(new int[] { 333, 333, 245 }, new int[] { 405, 430, 430 }, 3); // piso entrada
-        g.fillRect(333, 405, 317, 25); // piso entrada
+        g.fillPolygon(new int[] { 333, 333, 240 }, new int[] { 405, 432, 432 }, 3); // piso entrada
+        g.fillRect(333, 405, 317, 28); // piso entrada
         g.setColor(new Color(130, 114, 108));
         g.fillPolygon(new int[] { 333, 333, 287 }, new int[] { 405, 418, 418 }, 3); // sombra piso entrada
         g.fillRect(333, 405, 317, 13); // sombra piso entrada
@@ -98,49 +98,49 @@ public class House extends JPanel {
         // ===== FACHADA ENTRADA =====
         g.setColor(new Color(243, 239, 240));
         // rejillas
-        g.fillRect(380, 415, 120, 5);// parte inferior rejilla 1
-        g.fillRect(380, 383, 120, 7);// parte superior rejilla 1
+        g.fillRect(380, 420, 255, 5);// parte inferior rejillas
+        g.fillRect(380, 388, 255, 7);// parte superior rejillas
 
         // barras rejillas 1
         int x = 382;
         for (int i = 0; i < 15; i++) {
-            g.fillRect(x, 390, 3, 25);
+            g.fillRect(x, 395, 3, 25);
             x += 8;
         }
-        g.fillRect(515, 415, 120, 5);// parte inferior rejilla 2
-        g.fillRect(515, 383, 120, 7);// parte superior rejilla 2
         // barras rejillas 2
         x = 517;
         for (int i = 0; i < 15; i++) {
-            g.fillRect(x, 390, 3, 25);
+            g.fillRect(x, 395, 3, 25);
             x += 8;
         }
         g.setColor(new Color(162, 162, 173));
-        g.drawLine(640, 385, 380, 385);
-        g2d.setStroke(new BasicStroke(7)); // barandilla 1
-        g.setColor(new Color(170, 166, 164)); // barandilla 1
-        g2d.drawLine(260, 383, 320, 373); // barandilla 1
+        g.drawLine(640, 390, 380, 390);
         // pilares
         g.setColor(new Color(243, 239, 240));
-        g.fillRect(245, 300, 15, 130);// pilar 1
-        g.fillRect(247, 443, 11, 10);// pilar 1 parte inferior
+        g.fillRect(246, 300, 15, 130);// pilar 1
+        g.fillRect(248, 443, 11, 10);// pilar 1 parte inferior
         x = 365;
         for (int i = 0; i < 3; i++) { // pilares 2, 3 y 4
             g.fillRect(x, 300, 15, 130);
             g.fillRect((x + 2), 443, 11, 10);
             x += 135;
         }
-        g.fillRect(245, 433, 405, 10);// base
+        g.fillRect(243, 432, 407, 10);// base
 
         g.setColor(new Color(175, 188, 201));
-        g.fillRect(245, 300, 15, 23); // sombra pilar 1
-        g.fillRect(247, 443, 11, 4);// sombra pilar 1 parte inferior
+        g.fillRect(246, 300, 15, 23); // sombra pilar 1
+        g.fillRect(248, 442, 11, 4);// sombra pilar 1 parte inferior
         x = 365;
         for (int i = 0; i < 3; i++) { // sombras pilares 2, 3 y 4
             g.fillRect(x, 300, 15, 23);
-            g.fillRect((x + 2), 443, 11, 4);
+            g.fillRect((x + 2), 442, 11, 4);
             x += 135;
         }
+        // ===== ESCALERAS =====
+        g.setColor(new Color(175, 188, 201));
+        g.fillPolygon(new int[] { 259, 242, 248, 265 }, new int[] { 431, 453, 453, 431 }, 4); // escalera derecha
+        g.setColor(new Color(161, 154, 154));
+        g.fillPolygon(new int[] { 265, 248, 248, 265 }, new int[] { 431, 453, 463, 441 }, 4); // escalera
 
     }
 
