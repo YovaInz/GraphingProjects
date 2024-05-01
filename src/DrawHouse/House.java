@@ -66,11 +66,11 @@ public class House extends JPanel {
         // ===== ENTRADA =====
 
         g.setColor(new Color(239, 203, 193));
-        g.fillPolygon(new int[] { 333, 333, 240 }, new int[] { 405, 432, 432 }, 3); // piso entrada
-        g.fillRect(333, 405, 317, 28); // piso entrada
+        g.fillPolygon(new int[] { 328, 325, 240 }, new int[] { 405, 432, 432 }, 3); // piso entrada
+        g.fillRect(325, 405, 317, 28); // piso entrada
         g.setColor(new Color(130, 114, 108));
-        g.fillPolygon(new int[] { 333, 333, 287 }, new int[] { 405, 418, 418 }, 3); // sombra piso entrada
-        g.fillRect(333, 405, 317, 13); // sombra piso entrada
+        g.fillPolygon(new int[] { 325, 325, 287 }, new int[] { 405, 418, 418 }, 3); // sombra piso entrada
+        g.fillRect(325, 405, 317, 13); // sombra piso entrada
 
         g.setColor(new Color(170, 161, 157));
         g.fillRect(355, 300, 205, 118);// Pared 1 entrada
