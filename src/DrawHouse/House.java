@@ -173,6 +173,8 @@ public class House extends JPanel {
 
         g2d.setPaint(new GradientPaint(40, 0, new Color(127, 132, 145), 400, 0, new Color(112, 115, 120)));
         g.fillPolygon(new int[] { 300, 300, 330, 330 }, new int[] { 412, 378, 370, 402 }, 4);
+        g.setColor(new Color(100, 102, 96));
+        g.drawLine(300, 381, 330, 373);
 
         // pilar puerta
 
@@ -186,7 +188,7 @@ public class House extends JPanel {
         g2d.setColor(new Color(153, 150, 150));
         g.fillPolygon(new int[] { 265, 265, 297, 297 }, new int[] { 422, 388, 380, 412 }, 4);
         g.setColor(Color.gray);
-        g.drawLine(265, 393, 296, 385);
+        g.drawLine(265, 391, 296, 383);
         // pilares
         g.setColor(new Color(243, 239, 240));
         g.fillRect(246, 300, 15, 130);// pilar 1
