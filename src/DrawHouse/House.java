@@ -296,8 +296,36 @@ public class House extends JPanel {
         // ! tu parte madafaka //
 
         ////////// PARTE DE YOVANNI/////////////
+        g.setColor(new Color(121, 115, 116));
+        g.drawLine(220, 293, 672, 293); // bordillo
+        g2d.setStroke(new BasicStroke(1));
+        g.setColor(new Color(140, 138, 141));
+        g.drawLine(217, 293, 672, 293); // linea bordillo
+        g.setColor(new Color(169, 165, 166));
+        g.fillPolygon(new int[] { 220, 672, 560, 355 }, new int[] { 291, 291, 257, 257 }, 4); // trapecio techo entrada
+        g.setColor(new Color(248, 244, 241));
+        g.fillRect(355, 157, 205, 100); // Pared 1 2do piso
+        g.setColor(Color.red);
+        g.fillRect(560, 161, 100, 88); // pared 2 2do piso
+        g.fillPolygon(new int[] { 355, 660, 507 }, new int[] { 161, 161, 70 }, 3); // Triangulo mayor 2do piso
+        g.setColor(new Color(243, 243, 239));
+        g.fillPolygon(new int[] { 331, 456, 456, 331 }, new int[] { 183, 100, 85, 168 }, 4); // orilla izquierda frente
+        g.fillPolygon(new int[] { 581, 456, 456, 581 }, new int[] { 183, 100, 85, 168 }, 4); // orilla derecha frente
+        g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 98, 76, 61, 92 }, 4);
+        g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4);
 
-        // ! no me la toques //
+        g.setColor(new Color(170, 170, 170));
+        g.drawLine(331, 175, 456, 92);
+        g.drawLine(580, 175, 456, 92);
+        g.drawLine(470, 93, 507, 68);
+        g.drawLine(507, 68, 679, 181);
+
+        // sombras
+        g.setColor(new Color(0, 0, 0, 28)); // sombras (opacidad)
+        g.fillPolygon(new int[] { 355, 456, 456, 355 }, new int[] { 198, 130, 100, 168 }, 4); // orilla izquierda frente
+        g.fillPolygon(new int[] { 560, 456, 456, 560 }, new int[] { 198, 130, 100, 168 }, 4); // orilla derecha frente
+        g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 128, 106, 76, 107 }, 4);
+        g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4);
 
     }
 
