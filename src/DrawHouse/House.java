@@ -17,6 +17,12 @@ public class House extends JPanel {
         g.fillRect(0, 360, 1280, 360);
         g2d.setPaint(new GradientPaint(0, 0, new Color(93, 143, 196), 0, 400, new Color(164, 199, 232)));
         g.fillRect(0, 0, 1280, 360);
+
+        g.setColor(new Color(85, 64, 43));
+        g.fillRect(253, 440, 600, 28);
+        g.setColor(new Color(12, 9, 8));
+        g.fillRect(253, 440, 600, 18);
+
         // ====== Dibujar Garage ======
         g.setColor(new Color(243, 239, 240));
         g.fillRect(650, 300, 350, 145); // paredes
@@ -117,11 +123,30 @@ public class House extends JPanel {
             y += 8;
         }
         g.setColor(new Color(177, 172, 169));
-        g.fillRect(390, 305, 100, 80);
-        g.setColor(new Color(24, 28, 38));
-        g.fillRect(565, 315, 25, 20);// ventana pequeña
-        g.fillRect(395, 310, 42, 70); // ventana grande lado izquierdo
-        g.fillRect(443, 310, 42, 70); // ventana grande lado derecho
+        g.fillRect(403, 305, 100, 80);
+        g.setColor(new Color(49, 49, 45));
+        g.fillRect(565, 315, 25, 20);// marco ventana pequeña
+        g.fillRect(408, 310, 42, 70); // marco ventana grande lado izquierdo
+        g.fillRect(456, 310, 42, 70); // marco ventana grande lado derecho
+        g.setColor(new Color(92, 101, 108));
+        g.fillRect(569, 319, 17, 13); // ventana pequeña
+        g.fillRect(413, 315, 32, 60); // ventana grande lado izquierdo
+        g.fillRect(461, 315, 32, 60); // ventana grande lado derecho
+        g.setColor(new Color(49, 49, 45));
+        g2d.setStroke(new BasicStroke(3));
+        g.drawLine(413, 345, 445, 345); // detalles medios marco izquierdo
+        g.drawLine(461, 345, 491, 345); // detalles medios marco derecho
+        g2d.setStroke(new BasicStroke(1));
+        g.drawLine(413, 330, 445, 330); // detalles horizontales marco izquierdo
+        g.drawLine(461, 330, 491, 330); // detalles horizontales marco derecho
+        g.drawLine(565, 325, 588, 325); // detalles horizontales marco pequeño
+        g.drawLine(577, 315, 577, 333); // detalles verticales marco pequeño
+        int x = 423;
+        for (int i = 0; i < 2; i++) { // detalles verticales marcos grandes
+            g.drawLine(x, 315, x, 345);
+            g.drawLine(x + 48, 315, x + 48, 345);
+            x += 11;
+        }
 
         // ===== FACHADA ENTRADA =====
         g.setColor(new Color(243, 239, 240));
@@ -130,7 +155,7 @@ public class House extends JPanel {
         g.fillRect(380, 388, 255, 7);// parte superior rejillas
 
         // barras rejillas 1
-        int x = 382;
+        x = 382;
         for (int i = 0; i < 15; i++) {
             g.fillRect(x, 395, 3, 25);
             x += 8;
@@ -143,6 +168,25 @@ public class House extends JPanel {
         }
         g.setColor(new Color(162, 162, 173));
         g.drawLine(640, 390, 380, 390);
+
+        // barandal 2 puerta
+
+        g2d.setPaint(new GradientPaint(40, 0, new Color(127, 132, 145), 400, 0, new Color(112, 115, 120)));
+        g.fillPolygon(new int[] { 300, 300, 330, 330 }, new int[] { 412, 378, 370, 402 }, 4);
+
+        // pilar puerta
+
+        g.setColor(new Color(166, 176, 187));
+        g.fillRect(290, 307, 11, 110); // pilar puerta
+        g.setColor(new Color(130, 125, 120));
+        g.fillPolygon(new int[] { 301, 305, 305, 301 }, new int[] { 307, 309, 415, 418 }, 4); // sombra pilar puerta
+
+        // barandal 1 puerta
+
+        g2d.setColor(new Color(153, 150, 150));
+        g.fillPolygon(new int[] { 265, 265, 297, 297 }, new int[] { 422, 388, 380, 412 }, 4);
+        g.setColor(Color.gray);
+        g.drawLine(265, 393, 296, 385);
         // pilares
         g.setColor(new Color(243, 239, 240));
         g.fillRect(246, 300, 15, 130);// pilar 1
@@ -154,7 +198,8 @@ public class House extends JPanel {
             x += 135;
         }
         g.fillRect(243, 432, 407, 10);// base
-
+        g.setColor(new Color(183, 178, 175));
+        g.fillPolygon(new int[] { 261, 266, 266, 261 }, new int[] { 297, 300, 427, 430 }, 4); // sombra pilar 1
         g.setColor(new Color(175, 188, 201));
         g.fillRect(246, 300, 15, 23); // sombra pilar 1
         g.fillRect(248, 442, 11, 4);// sombra pilar 1 parte inferior
@@ -184,6 +229,21 @@ public class House extends JPanel {
         g.fillRect(337, 458, 6, 10); // escalera derecha parte frontal
         g.setColor(new Color(161, 154, 154));
         g.fillPolygon(new int[] { 355, 343, 343, 355 }, new int[] { 431, 458, 468, 441 }, 4); // sombra escalera derecha
+
+        // ===== PATIO =====
+        g.setColor(new Color(175, 188, 201));
+        g.fillPolygon(new int[] { 247, 207, 307, 342 }, new int[] { 468, 498, 498, 468 }, 4); // camino patio gris
+                                                                                              // frente a escaleras
+        g.fillRect(307, 475, 500, 23);// camino frente a casa y plantas
+        g.fillPolygon(new int[] { 650, 680, 1015, 985 }, new int[] { 445, 475, 475, 445 }, 4); // camino patio gris
+                                                                                               // frente a la cochera
+        g.fillPolygon(new int[] { 680, 1550, 1885, 1015 }, new int[] { 475, 875, 875, 475 }, 4); // camino patio gris
+                                                                                                 // frente a la cochera
+        g.fillRect(985, 450, 45, 15);
+        g.fillPolygon(new int[] { 1000, 1000, 1027, 1050 }, new int[] { 420, 435, 465, 465 }, 4); // camino patio gris
+                                                                                                  // frente a la cochera
+                                                                                                  // lado derecho
+
     }
 
     public static void main(String[] args) {
