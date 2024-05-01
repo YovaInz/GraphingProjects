@@ -169,7 +169,7 @@ public class House extends JPanel {
         g.setColor(new Color(162, 162, 173));
         g.drawLine(640, 390, 380, 390);
 
-        // barandal 2 puerta
+        // barandal 2 puerta xd
 
         g2d.setPaint(new GradientPaint(40, 0, new Color(127, 132, 145), 400, 0, new Color(112, 115, 120)));
         g.fillPolygon(new int[] { 300, 300, 330, 330 }, new int[] { 412, 378, 370, 402 }, 4);
