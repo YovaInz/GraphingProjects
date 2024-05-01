@@ -289,6 +289,14 @@ public class House extends JPanel {
                                                                                                   // frente a la cochera
                                                                                                   // lado derecho
 
+        // ====== TECHO ========
+
+        ////////// PARTE DE YOVANNI/////////////
+
+        // no tocar //
+
+        ////////// PARTE DE VICTORIA/////////////
+
     }
 
     public static void main(String[] args) {
