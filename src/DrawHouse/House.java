@@ -73,7 +73,7 @@ public class House extends JPanel {
         // ===== ENTRADA =====
 
         g.setColor(new Color(144, 153, 163));
-        g.fillRect(322, 304, 50, 120); // pared puerta principal
+        g.fillRect(322, 300, 50, 124); // pared puerta principal
         g.setColor(new Color(124, 132, 143));
         g.drawLine(326, 315, 373, 315); // patron de pared
         y = 322;
@@ -174,7 +174,19 @@ public class House extends JPanel {
         g2d.setPaint(new GradientPaint(40, 0, new Color(127, 132, 145), 400, 0, new Color(112, 115, 120)));
         g.fillPolygon(new int[] { 300, 300, 330, 330 }, new int[] { 412, 378, 370, 402 }, 4);
         g.setColor(new Color(100, 102, 96));
-        g.drawLine(300, 381, 330, 373);
+        g.drawLine(300, 381, 329, 373); // lineas superiores
+        g.setColor(new Color(100, 103, 97));
+        g.drawLine(300, 385, 329, 376); // lineas superiores
+
+        g.setColor(new Color(120, 133, 158)); // lineas verticales
+        x = 327;
+        y = 377;
+        for (int i = 0; i < 30; i++) {
+            g.drawLine(x, y, x, y + 23);
+            x -= 2;
+            if (i % 3 == 0)
+                y += 2;
+        }
 
         // pilar puerta
 
@@ -185,30 +197,61 @@ public class House extends JPanel {
 
         // barandal 1 puerta
 
-        g2d.setColor(new Color(153, 150, 150));
+        g.setColor(new Color(167, 168, 181));
         g.fillPolygon(new int[] { 265, 265, 297, 297 }, new int[] { 422, 388, 380, 412 }, 4);
         g.setColor(Color.gray);
-        g.drawLine(265, 391, 296, 383);
+        g.drawLine(265, 391, 296, 383); // lineas superiores
+        g.setColor(new Color(142, 136, 136));
+        g.drawLine(265, 395, 296, 387); // lineas superiores
+
+        g.setColor(new Color(157, 151, 163)); // lineas verticales
+        x = 294;
+        y = 387;
+        for (int i = 0; i < 20; i++) {
+            g.drawLine(x, y, x, y + 23);
+            x -= 2;
+            if (i % 3 == 0)
+                y += 2;
+        }
+
+        // techo entrada
+
+        g.setColor(new Color(146, 145, 131));
+        g.fillPolygon(new int[] { 260, 325, 325 }, new int[] { 300, 300, 315 }, 3);
+        g.setColor(new Color(123, 124, 121));
+        g2d.setStroke(new BasicStroke(3));
+        g.drawLine(250, 300, 672, 300); // techo parte 1
+        g.setColor(new Color(194, 193, 200));
+        g.drawLine(221, 297, 672, 297); // techo parte 2
+
         // pilares
         g.setColor(new Color(243, 239, 240));
-        g.fillRect(246, 300, 15, 130);// pilar 1
+        g.fillRect(246, 301, 15, 129);// pilar 1
         g.fillRect(248, 443, 11, 10);// pilar 1 parte inferior
         x = 365;
         for (int i = 0; i < 3; i++) { // pilares 2, 3 y 4
-            g.fillRect(x, 300, 15, 130);
+            g.fillRect(x, 301, 15, 129);
             g.fillRect((x + 2), 443, 11, 10);
             x += 135;
         }
         g.fillRect(243, 432, 407, 10);// base
         g.setColor(new Color(183, 178, 175));
-        g.fillPolygon(new int[] { 261, 266, 266, 261 }, new int[] { 297, 300, 427, 430 }, 4); // sombra pilar 1
-        g.setColor(new Color(175, 188, 201));
-        g.fillRect(246, 300, 15, 23); // sombra pilar 1
+        g.fillPolygon(new int[] { 261, 266, 266, 261 }, new int[] { 301, 303, 427, 430 }, 4); // sombra pilar 1
+        g.setColor(new Color(191, 197, 211));
+        g.fillRect(246, 301, 15, 22); // sombra pilar 1
         g.fillRect(248, 442, 11, 4);// sombra pilar 1 parte inferior
         x = 365;
         for (int i = 0; i < 3; i++) { // sombras pilares 2, 3 y 4
-            g.fillRect(x, 300, 15, 23);
+            g.fillRect(x, 301, 15, 23);
             g.fillRect((x + 2), 442, 11, 4);
+            x += 135;
+        }
+        g2d.setStroke(new BasicStroke(1));
+        g.setColor(new Color(89, 85, 76));
+        g.drawLine(246, 301, 261, 301); // sombra superior pilar 1
+        x = 365;
+        for (int i = 0; i < 3; i++) {
+            g.drawLine(x, 301, x + 15, 301); // sombra superior pilar 2, 3 y 4
             x += 135;
         }
         // ===== ESCALERAS =====
