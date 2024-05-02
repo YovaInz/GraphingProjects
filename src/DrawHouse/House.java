@@ -87,11 +87,11 @@ public class House extends JPanel {
         g.drawLine(333, 315, 333, 405);
 
         g.setColor(new Color(239, 203, 193));
-        g.fillPolygon(new int[] { 328, 325, 240 }, new int[] { 405, 432, 432 }, 3); // piso entrada
-        g.fillRect(325, 405, 317, 28); // piso entrada
+        g.fillPolygon(new int[] { 328, 350, 240 }, new int[] { 405, 432, 432 }, 3); // piso entrada
+        g.fillRect(325, 405, 325, 28); // piso entrada
         g.setColor(new Color(130, 114, 108));
         g.fillPolygon(new int[] { 325, 325, 287 }, new int[] { 405, 418, 418 }, 3); // sombra piso entrada
-        g.fillRect(325, 405, 317, 13); // sombra piso entrada
+        g.fillRect(325, 405, 320, 13); // sombra piso entrada
 
         g.setColor(new Color(26, 33, 46));
         g.fillRect(337, 315, 25, 90); // Puerta principal
@@ -304,54 +304,55 @@ public class House extends JPanel {
         g.setColor(new Color(198, 195, 197));
         g2d.setStroke(new BasicStroke(5));
         g.drawLine(675, 293, 1020, 293);
-        g.fillPolygon(new int[] { 1020, 1020, 1025}, new int[] { 290, 297, 290},3);
+        g.fillPolygon(new int[] { 1020, 1020, 1025 }, new int[] { 290, 297, 290 }, 3);
         g.setColor(new Color(154, 151, 153));
-        g.fillPolygon(new int[] { 400, 400, 1025, 930}, new int[] { 180, 291, 291, 180 },4); //trapecio del techo
+        g.fillPolygon(new int[] { 400, 400, 1025, 930 }, new int[] { 180, 291, 291, 180 }, 4); // trapecio del techo
         g.setColor(new Color(83, 79, 80));
-        g.fillPolygon(new int[] { 740, 759, 775, 759}, new int[] { 207, 260, 254, 204 },4); //sombra en el techo 1
-        g.fillPolygon(new int[] { 870, 869, 888, 868}, new int[] { 207, 255, 258, 204 },4); //sombra en el techo 2
+        g.fillPolygon(new int[] { 740, 759, 775, 759 }, new int[] { 207, 260, 254, 204 }, 4); // sombra en el techo 1
+        g.fillPolygon(new int[] { 870, 869, 888, 868 }, new int[] { 207, 255, 258, 204 }, 4); // sombra en el techo 2
 
         g.setColor(new Color(243, 239, 240));
         g.fillRect(779, 190, 93, 72);// pared frontal cuarto arriba de cochera
-        g.fillPolygon(new int[] { 830, 779, 872}, new int[] { 150, 190, 190 },3); //pared arriba cuarto sobre cochera
+        g.fillPolygon(new int[] { 830, 779, 872 }, new int[] { 150, 190, 190 }, 3); // pared arriba cuarto sobre cochera
 
         g.setColor(new Color(121, 121, 122));
-        g.fillPolygon(new int[] { 872, 872, 900}, new int[] { 190, 208, 205},3); //parte sombreada bajo el techo del cuarto
+        g.fillPolygon(new int[] { 872, 872, 900 }, new int[] { 190, 208, 205 }, 3); // parte sombreada bajo el techo del
+                                                                                    // cuarto
         g.setColor(new Color(162, 162, 173));
         g2d.setStroke(new BasicStroke(1));
         x = 786;
         for (int i = 0; i < 16; i++) { // Patron de lineas de los cuartos de arriba
             g.drawLine(x, 200, x, 262);
-            if (i%2==0) {
-                x+=7;
-            }else x+=3;
+            if (i % 2 == 0) {
+                x += 7;
+            } else
+                x += 3;
         }
         y = 190;
-        x=786;
-        int x2=865;
+        x = 786;
+        int x2 = 865;
         for (int i = 0; i < 4; i++) {
-            g.drawLine(x, y, (x2-4), y);
+            g.drawLine(x, y, (x2 - 4), y);
             y -= 8;
-            x+=5;
-            x2-=15;
+            x += 5;
+            x2 -= 15;
         }
-        g.drawLine(862, 190, 789, 150); //detalle de linea 
-        g.drawLine(786, 200, 789, 200); //detalle de linea 
-        g.drawLine(849, 200, 862, 200); //detalle de linea 
-
+        g.drawLine(862, 190, 789, 150); // detalle de linea
+        g.drawLine(786, 200, 789, 200); // detalle de linea
+        g.drawLine(849, 200, 862, 200); // detalle de linea
 
         g.setColor(new Color(253, 249, 250));
         g.fillRect(790, 192, 70, 63);// antemarco ventanas
 
         g.setColor(new Color(49, 49, 45));
-        g.fillRect(795, 200, 26, 50);//marco ventana 1
-        g.fillRect(829, 200, 26, 50);//marco ventana 2
+        g.fillRect(795, 200, 26, 50);// marco ventana 1
+        g.fillRect(829, 200, 26, 50);// marco ventana 2
         g.setColor(new Color(92, 101, 108));
-        g.fillRect(799, 204, 18, 42); //ventana 1
-        g.fillRect(833, 204, 18, 42); //ventana 2
+        g.fillRect(799, 204, 18, 42); // ventana 1
+        g.fillRect(833, 204, 18, 42); // ventana 2
         g.setColor(new Color(49, 49, 45));
         g2d.setStroke(new BasicStroke(3));
-        g.drawLine(833, 225, 851, 225); //DETALLES VENTANAS
+        g.drawLine(833, 225, 851, 225); // DETALLES VENTANAS
         g.drawLine(799, 225, 818, 225);
         g2d.setStroke(new BasicStroke(1));
         g.drawLine(799, 214, 818, 214);
@@ -359,31 +360,40 @@ public class House extends JPanel {
         g.drawLine(808, 204, 808, 225);
         g.drawLine(842, 204, 842, 225);
 
-        //sombras
+        // sombras
         g.setColor(new Color(32, 30, 30, 50));
-        g.fillPolygon(new int[] { 830,873, 873, 830, 779, 779}, new int[] { 165, 191, 216, 190, 220, 195},6); //techo del cuarto sobre cochera
+        g.fillPolygon(new int[] { 830, 873, 873, 830, 779, 779 }, new int[] { 165, 191, 216, 190, 220, 195 }, 6); // techo
+                                                                                                                  // del
+                                                                                                                  // cuarto
+                                                                                                                  // sobre
+                                                                                                                  // cochera
 
         g.setColor(new Color(213, 215, 218));
-        g.fillPolygon(new int[] { 826, 822, 830, 834}, new int[] { 171, 190, 190, 171 },4); //sostenedor de techo pt 1
+        g.fillPolygon(new int[] { 826, 822, 830, 834 }, new int[] { 171, 190, 190, 171 }, 4); // sostenedor de techo pt
+                                                                                              // 1
         g.setColor(new Color(253, 249, 250));
-        g.fillRect(826, 163, 8,8); //sostenedor de techo pt 2 (cuadrito)
-        g.fillPolygon(new int[] { 830,900, 900, 830, 760, 760}, new int[] { 150, 190, 205, 165, 205, 190 },6); //techo del cuarto sobre cochera
+        g.fillRect(826, 163, 8, 8); // sostenedor de techo pt 2 (cuadrito)
+        g.fillPolygon(new int[] { 830, 900, 900, 830, 760, 760 }, new int[] { 150, 190, 205, 165, 205, 190 }, 6); // techo
+                                                                                                                  // del
+                                                                                                                  // cuarto
+                                                                                                                  // sobre
+                                                                                                                  // cochera
         g.setColor(new Color(147, 155, 168));
-        g.fillPolygon(new int[] { 779,760, 779}, new int[] { 195, 204, 262},3); //costado con sombra del cuarto
+        g.fillPolygon(new int[] { 779, 760, 779 }, new int[] { 195, 204, 262 }, 3); // costado con sombra del cuarto
         g.setColor(new Color(125, 122, 124));
-        g.fillPolygon(new int[] { 738, 741, 760,760}, new int[] { 204, 214, 205, 190},4); //costado con sombra del techo del cuarto
+        g.fillPolygon(new int[] { 738, 741, 760, 760 }, new int[] { 204, 214, 205, 190 }, 4); // costado con sombra del
+                                                                                              // techo del cuarto
 
-        g.drawLine(830, 157, 760, 197); //linea 1 (detalle) techo del cuarto
-        g.drawLine(830, 157, 900, 197); //linea 2 (detalle) techo del cuarto
-        g.fillPolygon(new int[] { 822,823, 826}, new int[] { 172, 190, 167},3); //sombra del sostenedor de techo
+        g.drawLine(830, 157, 760, 197); // linea 1 (detalle) techo del cuarto
+        g.drawLine(830, 157, 900, 197); // linea 2 (detalle) techo del cuarto
+        g.fillPolygon(new int[] { 822, 823, 826 }, new int[] { 172, 190, 167 }, 3); // sombra del sostenedor de techo
         g.setColor(new Color(59, 59, 55));
-        g.drawLine(760, 197, 740, 209); //linea 3 (detalle) techo del cuarto
+        g.drawLine(760, 197, 740, 209); // linea 3 (detalle) techo del cuarto
         g.setColor(new Color(147, 155, 168));
         g2d.setStroke(new BasicStroke(2));
-        g.drawLine(830, 166, 760, 205); //detalle de sombra bajo sostenedor de techo
+        g.drawLine(830, 166, 760, 205); // detalle de sombra bajo sostenedor de techo
         g.setColor(new Color(121, 121, 122));
-        g.drawLine(830, 166, 900, 205); //detalle de sombra bajo sostenedor de techo
-
+        g.drawLine(830, 166, 900, 205); // detalle de sombra bajo sostenedor de techo
 
         ////////// PARTE DE YOVANNI/////////////
 
@@ -393,6 +403,9 @@ public class House extends JPanel {
         g.fillRect(339, 206, 50, 70); // marco ventanita
         g.setColor(new Color(156, 178, 203));
         g.fillRect(343, 209, 12, 70); // ventanita
+        g.setColor(new Color(219, 215, 212));
+        g.drawLine(326, 202, 326, 265); // detalle paredsita
+        g.drawLine(334, 202, 334, 262); // detalle paredsita
         g2d.setStroke(new BasicStroke(3));
         g.setColor(new Color(75, 72, 77));
         g.drawLine(343, 235, 355, 235); // separacion ventanita
@@ -401,6 +414,8 @@ public class House extends JPanel {
         g.drawLine(352, 206, 352, 235); // detalles vertical ventanita
 
         // tejadito
+        g.setColor(new Color(0, 0, 0, 68)); // sombras (opacidad)
+        g.fillOval(321, 190, 42, 35); // sombra tejadito
         g.setColor(new Color(162, 168, 172));
         g2d.setStroke(new BasicStroke(5));
         g.drawLine(302, 200, 355, 200); // bordillo 2
@@ -416,6 +431,7 @@ public class House extends JPanel {
         g.setColor(new Color(110, 111, 106));
         g.fillPolygon(new int[] { 660, 660, 668, 680 }, new int[] { 175, 195, 200, 175 }, 4); // sombra tejado
 
+        //
         g2d.setStroke(new BasicStroke(5));
         g.setColor(new Color(121, 115, 116));
         g.drawLine(220, 293, 672, 293); // bordillo
@@ -433,7 +449,85 @@ public class House extends JPanel {
         g.fillPolygon(new int[] { 581, 456, 456, 581 }, new int[] { 183, 100, 85, 168 }, 4); // orilla derecha frente
         g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 98, 76, 61, 92 }, 4); // orilla izquierda atras
         g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4); // orilla derecha atras
+        // ============== detalles paredes =====================
+        // lado izquierdo
+        g.setColor(new Color(219, 215, 212));
+        g.drawLine(408, 161, 408, 257);
+        x = 404;
+        y = 161;
+        for (int i = 0; i < 2; i++) {
+            g.drawLine(x, y, x, y + 96);
+            g.drawLine(x - 5, 161, x - 5, 257);
+            x -= 14;
+        }
+        g.drawLine(376, 163, 376, 257);
+        g.drawLine(371, 166, 371, 257);
+        g.drawLine(362, 172, 362, 257);
+        g.drawLine(362, 172, 379, 161);
+        g.drawLine(379, 161, 408, 161);
+        // lado derecho
+        g.drawLine(508, 161, 508, 257);
+        x = 512;
+        y = 161;
+        for (int i = 0; i < 2; i++) {
+            g.drawLine(x, y, x, y + 96);
+            g.drawLine(x + 5, 161, x + 5, 257);
+            x += 14;
+        }
+        g.drawLine(540, 163, 540, 257);
+        g.drawLine(545, 166, 545, 257);
+        g.drawLine(554, 172, 554, 257);
+        g.drawLine(554, 172, 543, 161);
+        g.drawLine(543, 161, 508, 161);
 
+        g.drawLine(395, 150, 521, 150);
+        g.drawLine(395, 150, 456, 110);
+        g.drawLine(456, 110, 521, 150);
+        int x1 = 405;
+        x2 = 511;
+        y = 143;
+        for (int i = 0; i < 5; i++) {
+            g.drawLine(x1, y, x2, y);
+            x1 += 11;
+            x2 -= 11;
+            y -= 7;
+        }
+        g.drawLine(580, 168, 456, 85);
+        g.drawLine(580, 183, 456, 100);
+        g.drawLine(580, 183, 580, 168);
+        x = 554;
+        y = 152;
+        for (int i = 0; i < 9; i++) {
+            g.drawLine(x, y, x + 66, y);
+            x -= 10;
+            y -= 7;
+        }
+
+        g2d.setStroke(new BasicStroke(2));
+        g.drawLine(576, 164, 640, 164);
+        g2d.setStroke(new BasicStroke(1));
+        g.drawLine(580, 175, 650, 175);
+        g.drawLine(562, 238, 645, 238);
+        g.drawLine(562, 238, 562, 175);
+        g.drawLine(645, 238, 645, 183);
+        g.drawLine(650, 175, 650, 183);
+        g.drawLine(645, 183, 650, 183);
+        g.drawLine(570, 238, 570, 248);
+        g.drawLine(573, 238, 573, 248);
+
+        x = 584;
+        for (int i = 0; i < 5; i++) {
+            g.drawLine(x, 175, x, 165);
+            g.drawLine(x + 3, 175, x + 3, 165);
+            g.drawLine(x, 238, x, 248);
+            g.drawLine(x + 3, 238, x + 3, 248);
+            x += 14;
+        }
+
+        g.drawLine(653, 172, 653, 248);
+        g.setColor(new Color(137, 132, 135));
+        g.drawLine(360, 302, 360, 417);
+        // lineas tejado
         g.setColor(new Color(170, 170, 170));
         g.drawLine(331, 175, 456, 92);
         g.drawLine(580, 175, 456, 92);
@@ -478,16 +572,24 @@ public class House extends JPanel {
         g2d.setStroke(new BasicStroke(3));
         g.drawLine(415, 217, 453, 217);
         g.drawLine(461, 217, 500, 217);
+        g.setColor(new Color(213, 215, 218));
+        g.fillPolygon(new int[] { 452, 454, 462, 460 }, new int[] { 108, 130, 130, 108 }, 4); // sostenedor de techo pt
+        g.fillPolygon(new int[] { 502, 504, 512, 510 }, new int[] { 88, 110, 110, 88 }, 4); // sostenedor de techo pt
+
         // sombras
-        g.setColor(new Color(0, 0, 0, 58)); // sombras (opacidad)
+        g.setColor(new Color(0, 0, 0, 68)); // sombras (opacidad)
         g.fillPolygon(new int[] { 355, 456, 456, 331 }, new int[] { 198, 130, 100, 183 }, 4); // orilla izquierda frente
         g.fillPolygon(new int[] { 560, 456, 456, 560 }, new int[] { 198, 130, 100, 168 }, 4); // orilla derecha frente
         g.fillPolygon(new int[] { 496, 507, 507, 476 }, new int[] { 112, 106, 76, 98 }, 4); // orilla izquierda atras
         g.fillPolygon(new int[] { 659, 507, 507, 659 }, new int[] { 204, 106, 76, 174 }, 4); // orilla derecha atras
         g.fillPolygon(new int[] { 660, 660, 671, 678 }, new int[] { 230, 188, 195, 235 }, 4); // sombrita tejadito
+        g.fillPolygon(new int[] { 560, 560, 578, 580 }, new int[] { 240, 170, 182, 248 }, 4); // sombrita tejado frontal
+
+        g.setColor(new Color(244, 244, 244));
+        g.fillRect(452, 102, 8, 6); // sostenedor de techo pt 2 (cuadrito)
+        g.fillRect(502, 80, 8, 8);
     }
 
-    // sisisiisisi
     public static void main(String[] args) {
         JFrame frame = new JFrame("HOUSE");
         House obj = new House();
