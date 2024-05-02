@@ -296,6 +296,37 @@ public class House extends JPanel {
         // ! tu parte madafaka //
 
         ////////// PARTE DE YOVANNI/////////////
+
+        g.setColor(new Color(228, 225, 221));
+        g.fillRect(322, 202, 50, 90); // paredsita
+        g.setColor(new Color(75, 72, 77));
+        g.fillRect(339, 206, 50, 70); // marco ventanita
+        g.setColor(new Color(156, 178, 203));
+        g.fillRect(343, 209, 12, 70); // ventanita
+        g2d.setStroke(new BasicStroke(3));
+        g.setColor(new Color(75, 72, 77));
+        g.drawLine(343, 235, 355, 235); // separacion ventanita
+        g2d.setStroke(new BasicStroke(1));
+        g.drawLine(343, 222, 355, 222); // detalles horizontal ventanita
+        g.drawLine(352, 206, 352, 235); // detalles vertical ventanita
+
+        // tejadito
+        g.setColor(new Color(162, 168, 172));
+        g2d.setStroke(new BasicStroke(5));
+        g.drawLine(302, 200, 355, 200); // bordillo 2
+        g.setColor(new Color(208, 218, 220));
+        g2d.setStroke(new BasicStroke(1));
+        g.drawLine(302, 200, 355, 200); // detalle bordillo
+        g.setColor(new Color(109, 107, 112));
+        g.fillRect(300, 195, 100, 5); // borde
+        // tejadito 1
+        g.setColor(new Color(169, 165, 166));
+        g.fillPolygon(new int[] { 300, 414, 414, 345 }, new int[] { 195, 195, 123, 123 }, 4); // tejadito izquierdo
+        g.fillPolygon(new int[] { 665, 414, 414, 658 }, new int[] { 175, 195, 123, 123 }, 4); // tejadito derecho
+        g.setColor(new Color(110, 111, 106));
+        g.fillPolygon(new int[] { 660, 660, 668, 680 }, new int[] { 175, 195, 200, 175 }, 4); // sombra tejado
+
+        g2d.setStroke(new BasicStroke(5));
         g.setColor(new Color(121, 115, 116));
         g.drawLine(220, 293, 672, 293); // bordillo
         g2d.setStroke(new BasicStroke(1));
@@ -303,16 +334,15 @@ public class House extends JPanel {
         g.drawLine(217, 293, 672, 293); // linea bordillo
         g.setColor(new Color(169, 165, 166));
         g.fillPolygon(new int[] { 220, 672, 560, 355 }, new int[] { 291, 291, 257, 257 }, 4); // trapecio techo entrada
-        g.setColor(new Color(248, 244, 241));
+        g.setColor(new Color(246, 246, 246));
         g.fillRect(355, 157, 205, 100); // Pared 1 2do piso
-        g.setColor(Color.red);
         g.fillRect(560, 161, 100, 88); // pared 2 2do piso
         g.fillPolygon(new int[] { 355, 660, 507 }, new int[] { 161, 161, 70 }, 3); // Triangulo mayor 2do piso
-        g.setColor(new Color(243, 243, 239));
+        g.setColor(new Color(255, 250, 250));
         g.fillPolygon(new int[] { 331, 456, 456, 331 }, new int[] { 183, 100, 85, 168 }, 4); // orilla izquierda frente
         g.fillPolygon(new int[] { 581, 456, 456, 581 }, new int[] { 183, 100, 85, 168 }, 4); // orilla derecha frente
-        g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 98, 76, 61, 92 }, 4);
-        g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4);
+        g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 98, 76, 61, 92 }, 4); // orilla izquierda atras
+        g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4); // orilla derecha atras
 
         g.setColor(new Color(170, 170, 170));
         g.drawLine(331, 175, 456, 92);
@@ -320,15 +350,54 @@ public class House extends JPanel {
         g.drawLine(470, 93, 507, 68);
         g.drawLine(507, 68, 679, 181);
 
-        // sombras
-        g.setColor(new Color(0, 0, 0, 28)); // sombras (opacidad)
-        g.fillPolygon(new int[] { 355, 456, 456, 355 }, new int[] { 198, 130, 100, 168 }, 4); // orilla izquierda frente
-        g.fillPolygon(new int[] { 560, 456, 456, 560 }, new int[] { 198, 130, 100, 168 }, 4); // orilla derecha frente
-        g.fillPolygon(new int[] { 475, 507, 507, 463 }, new int[] { 128, 106, 76, 107 }, 4);
-        g.fillPolygon(new int[] { 680, 507, 507, 680 }, new int[] { 189, 76, 61, 174 }, 4);
+        // ventanas
+        g.setColor(new Color(61, 60, 68));
+        g.fillRect(414, 161, 42, 17); // marco ventana izquierda arriba
+        g.fillRect(414, 182, 42, 71); // marco ventana izquierda abajo
+        g.fillRect(460, 161, 42, 17); // marco ventana derecha arriba
+        g.fillRect(460, 182, 42, 71); // marco ventana derecha abajo
+        g.fillRect(567, 182, 35, 53); // marco ventana 2 izquierda
+        g.fillRect(605, 182, 35, 53); // marco ventana 2 derecha
 
+        g.setColor(new Color(148, 178, 209));
+        g.fillRect(417, 164, 36, 11); // ventana izquierda arriba
+        g.fillRect(417, 185, 36, 65); // ventana izquierda abajo
+        g.fillRect(463, 164, 36, 11); // ventana derecha arriba
+        g.fillRect(463, 185, 36, 65); // ventana derecha abajo
+        g.fillRect(570, 185, 29, 47); // ventana 2 izquierda
+        g.fillRect(608, 185, 29, 47); // ventana 2 derecha
+
+        g.setColor(new Color(61, 60, 68));
+        g.drawLine(428, 161, 428, 176); // detalles ventana izquierda arriba
+        g.drawLine(442, 161, 442, 176); // detalles ventana izquierda arriba
+        g.drawLine(428, 182, 428, 217); // detalles ventana izquierda abajo
+        g.drawLine(442, 182, 442, 217); // detalles ventana izquierda abajo
+        g.drawLine(474, 161, 474, 176); // detalles ventana derecha arriba
+        g.drawLine(488, 161, 488, 176); // detalles ventana derecha arriba
+        g.drawLine(474, 182, 474, 217); // detalles ventana derecha abajo
+        g.drawLine(488, 182, 488, 217); // detalles ventana derecha abajo
+        g.drawLine(585, 185, 585, 234); // detalles ventana izquierda 2
+        g.drawLine(623, 185, 623, 234); // detalles ventana izquierda 2
+        g.drawLine(415, 200, 453, 200); // detalles horizontales ventana izquierda abajo
+        g.drawLine(461, 200, 500, 200); // detalles horizontales ventana derecha abajo
+        g.drawLine(570, 200, 600, 200); // detalles horizontales ventana izquierda 2
+        g.drawLine(570, 215, 600, 215); // detalles horizontales ventana izquierda 2
+        g.drawLine(608, 200, 638, 200); // detalles horizontales ventana derecha 2
+        g.drawLine(608, 215, 638, 215); // detalles horizontales ventana derecha 2
+
+        g2d.setStroke(new BasicStroke(3));
+        g.drawLine(415, 217, 453, 217);
+        g.drawLine(461, 217, 500, 217);
+        // sombras
+        g.setColor(new Color(0, 0, 0, 58)); // sombras (opacidad)
+        g.fillPolygon(new int[] { 355, 456, 456, 331 }, new int[] { 198, 130, 100, 183 }, 4); // orilla izquierda frente
+        g.fillPolygon(new int[] { 560, 456, 456, 560 }, new int[] { 198, 130, 100, 168 }, 4); // orilla derecha frente
+        g.fillPolygon(new int[] { 496, 507, 507, 476 }, new int[] { 112, 106, 76, 98 }, 4); // orilla izquierda atras
+        g.fillPolygon(new int[] { 659, 507, 507, 659 }, new int[] { 204, 106, 76, 174 }, 4); // orilla derecha atras
+        g.fillPolygon(new int[] { 660, 660, 671, 678 }, new int[] { 230, 188, 195, 235 }, 4); // sombrita tejadito
     }
 
+    // sisisiisisi
     public static void main(String[] args) {
         JFrame frame = new JFrame("HOUSE");
         House obj = new House();
